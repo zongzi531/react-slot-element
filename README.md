@@ -1,6 +1,6 @@
 # React Slot Element
 
->Learn Vue and implement Slot based on Web Components draft specification.
+>Learn [Vue.js](https://cn.vuejs.org/v2/guide/components.html#%E4%BD%BF%E7%94%A8%E6%8F%92%E6%A7%BD%E5%88%86%E5%8F%91%E5%86%85%E5%AE%B9) and implement **Slot** based on [Web Components draft specification](https://github.com/w3c/webcomponents/blob/gh-pages/proposals/Slots-Proposal.md).
 
 ## Install
 
@@ -16,7 +16,7 @@ yarn add react-slot-element
 
 ```javascript
 import React from 'react'
-import { Slot } from 'react-slot-element'
+import Slot from 'react-slot-element'
 
 class Parent extends React.Component {
   render () {

@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 const { Provider, Consumer } = React.createContext()
 
 function withSlots (WrappedComponent) {
-  return class extends React.Component {
+  return class extends Component {
     render () {
       return (<Provider value={React.Children.map(this.props.children, children => children)}>
         <WrappedComponent {...this.props} />
@@ -12,7 +12,7 @@ function withSlots (WrappedComponent) {
   }
 }
 
-export class Slot extends React.Component {
+export default class Slot extends Component {
   static with = withSlots
   
   render () {
