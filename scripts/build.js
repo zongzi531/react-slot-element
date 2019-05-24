@@ -33,6 +33,11 @@ async function build() {
   const bundle = await rollup.rollup(inputOptions)
 
   await bundle.write(outputOptions);
+
+  rollup.watch({
+    ...inputOptions,
+    output: [outputOptions],
+  })
 }
 
 build()

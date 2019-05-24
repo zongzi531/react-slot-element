@@ -62,3 +62,64 @@ ReactDOM.render(
   </div>
 </div>
 ```
+
+### 具名插槽
+
+父组件模板：
+
+```javascript
+import React from 'react'
+import Slot from 'react-slot-element'
+
+class Parent extends React.Component {
+  render () {
+    return (<div className="container">
+      <header>
+        <Parent name="header"></Parent>
+      </header>
+      <main>
+        <Parent></Parent>
+      </main>
+      <footer>
+        <Parent name="footer"></Parent>
+      </footer>
+    </div>)
+  }
+}
+
+export default Slot.with(Parent)
+```
+
+插槽内容：
+
+```javascript
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+ReactDOM.render(
+  <Parent>
+    <h1 slot="header">这里可能是一个页面标题</h1>
+    <p>主要内容的一个段落。</p>
+    <p>另一个主要段落。</p>
+    <p slot="footer">这里有一些联系信息</p>
+  </Parent>,
+  document.getElementById('root')
+)
+```
+
+渲染结果：
+
+```html
+<div class="container">
+  <header>
+    <h1>这里可能是一个页面标题</h1>
+  </header>
+  <main>
+    <p>主要内容的一个段落。</p>
+    <p>另一个主要段落。</p>
+  </main>
+  <footer>
+    <p>这里有一些联系信息</p>
+  </footer>
+</div>
+```
