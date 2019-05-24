@@ -21,9 +21,10 @@ import Slot from 'react-slot-element'
 class Parent extends React.Component {
   render () {
     return (<div>
-      <h1>我是父组件的标题</h1>
-      <Slot>只有在没有要分发的内容时才会显示。</Slot>
-      <p>这是更多的内容</p>
+      <h2>我是子组件的标题</h2>
+      <Slot>
+        只有在没有要分发的内容时才会显示。
+      </Slot>
     </div>)
   }
 }
@@ -38,10 +39,13 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 ReactDOM.render(
-  <Parent>
-    <h2>我是子组件的标题</h2>
-    <p>这是一些初始内容</p>
-  </Parent>,
+  <div>
+    <h1>我是父组件的标题</h1>
+    <Parent>
+      <p>这是一些初始内容</p>
+      <p>这是更多的初始内容</p>
+    </Parent>
+  </div>,
   document.getElementById('root')
 )
 ```
@@ -51,8 +55,10 @@ ReactDOM.render(
 ```html
 <div>
   <h1>我是父组件的标题</h1>
-  <h2>我是子组件的标题</h2>
-  <p>这是一些初始内容</p>
-  <p>这是更多的内容</p>
+  <div>
+    <h2>我是子组件的标题</h2>
+    <p>这是一些初始内容</p>
+    <p>这是更多的初始内容</p>
+  </div>
 </div>
 ```
