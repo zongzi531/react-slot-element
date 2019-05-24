@@ -1,1 +1,1 @@
-console.log('react-slot-element');
+export * from './src'

@@ -1,9 +1,12 @@
 {
   "name": "react-slot-element",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Learn Vue and implement Slot based on Web Components draft specification.",
   "main": "index.js",
   "repository": "https://github.com/zongzi531/react-slot-element.git",
   "author": "zongzi531 <zongzi.xy@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.8.6"
+  }
 }
