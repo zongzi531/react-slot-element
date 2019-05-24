@@ -1,0 +1,5 @@
+node_modules/
+scripts/
+src/
+.gitignore
+yarn.lock

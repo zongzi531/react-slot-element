@@ -1,5 +1,7 @@
 # React Slot Element
 
+[![license](https://img.shields.io/github/license/zongzi531/react-slot-element.svg)](https://github.com/zongzi531/react-slot-element/blob/master/LICENSE)
+
 >Learn [Vue.js](https://cn.vuejs.org/v2/guide/components.html#%E4%BD%BF%E7%94%A8%E6%8F%92%E6%A7%BD%E5%88%86%E5%8F%91%E5%86%85%E5%AE%B9) and implement **Slot** based on [Web Components draft specification](https://github.com/w3c/webcomponents/blob/gh-pages/proposals/Slots-Proposal.md).
 
 ## Install
