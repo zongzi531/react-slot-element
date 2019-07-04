@@ -4,8 +4,13 @@ const { Provider, Consumer } = React.createContext()
 
 const DEFAULT = 'default'
 
+function getDisplayName(WrappedComponent) {
+  return WrappedComponent.displayName || WrappedComponent.name || 'Component'
+}
+
 function withSlots (WrappedComponent) {
   return class extends Component {
+    static displayName = `withSlots(${getDisplayName(WrappedComponent)})`
     get slots () {
       const map = {}
       React.Children.forEach(this.props.children, children => {
